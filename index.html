@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PriceCompare - Smart Product Price Comparison</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">💰 PriceCompare</div>
+            
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-bar" placeholder="Search products...">
+                <button class="search-btn">🔍</button>
+            </div>
+            
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        <!-- Header Section -->
+        <section class="header-section">
+            <h1>Smart Product Price Comparison</h1>
+            <p>Compare prices across multiple platforms and find the best deals</p>
+        </section>
+
+        <!-- Controls Section -->
+        <section class="controls-section">
+            <div class="button-group">
+                <button class="sort-btn active" data-sort="original">All Products</button>
+                <button class="sort-btn" data-sort="price">💲 Lowest Price</button>
+                <button class="sort-btn" data-sort="rating">⭐ Highest Rating</button>
+                <button class="sort-btn" data-sort="reviews">📝 Most Reviews</button>
+            </div>
+        </section>
+
+        <!-- Products Grid -->
+        <section class="products-section">
+            <div id="productsGrid" class="products-grid">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Chart Section -->
+        <section class="chart-section">
+            <h2>Price History - Sample Product</h2>
+            <div class="chart-container">
+                <canvas id="priceChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stat-card">
+                <h3>Cheapest Product</h3>
+                <p id="cheapestProduct">-</p>
+                <span id="cheapestPrice" class="price">-</span>
+            </div>
+            <div class="stat-card">
+                <h3>Most Reviewed</h3>
+                <p id="mostReviewedProduct">-</p>
+                <span id="mostReviewedCount" class="review-count">-</span>
+            </div>
+            <div class="stat-card">
+                <h3>Highest Rated</h3>
+                <p id="highestRatedProduct">-</p>
+                <span id="highestRating" class="rating">-</span>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 PriceCompare. All rights reserved. Demo website with simulated data.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
