@@ -1,0 +1,53 @@
+const productsData = [ ... ]
+
+
+
+let allProducts = [...productsData];
+let filteredProducts = [...productsData];
+let currentSortType = 'original';
+
+
+
+const productsGrid = document.getElementById('productsGrid');
+const searchInput = document.getElementById('searchInput');
+const themeToggle = document.getElementById('themeToggle');
+const sortButtons = document.querySelectorAll('.sort-btn');
+
+
+
+
+function initTheme() {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.body.classList.toggle('light-mode', savedTheme === 'light');
+}
+
+
+
+
+When user clicks:
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
+
+function renderProducts(products = filteredProducts) { ... }
+
+
+
+const isCheapest = product.price === cheapestPrice;
+const isMostReviewed = product.reviews === maxReviews;
+
+
+searchInput.addEventListener('input', (e) => { ... })
+
+product.name.toLowerCase().includes(query)
+
+sortButtons.forEach(button => {
+    button.addEventListener('click', () => { ... })
+});
+
+
+function updateSortButtons() {
+    btn.classList.toggle('active', btn.getAttribute('data-sort') === currentSortType);
+}
